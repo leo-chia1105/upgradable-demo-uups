@@ -13,14 +13,23 @@ npx hardhat verify --network sepolia LOGIC_CONTRACT
 
 3. Verify proxy contract as proxy on explorer
 
-4. update proxyAddress in const.js
+4. Update proxyAddress in const.js
 
 ## Deploy V2 contract
 1. Deploy V2 logic contract by js script 
 ```
 npx hardhat run scripts/upgrade-uups.js --network sepolia       
 ```
-2. verify new logic contract
+2. Verify new logic contract
 ```
 npx hardhat verify --network sepolia NEW_LOGIC_CONTRACT
+```
+3. Check your proxy contract whether it is update
+
+## Note
+- In order for our contract to receive ERC1155 tokens, we can inherit from the convenience contract ERC1155Holder which handles the registering for us:
+```
+contract MyContract is ERC1155Holder{
+    ...
+}
 ```
