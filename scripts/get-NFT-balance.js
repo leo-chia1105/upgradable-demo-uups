@@ -7,11 +7,7 @@ async function main() {
   const addr1 = "0xBE4494DaB28095e1465aB151a21e9D529752998A";
 
   //balanceOf()
-  console.log((await contract.balanceOf(addr1, 0)).toString());
-
-  //mint()
-  //mint id 1 with 3 items to addr1
-  await contract.mint(addr1, 1, 3, "0x00");
+  console.log((await contract.balanceOf(addr1, 4)).toString());
 }
 
 main()

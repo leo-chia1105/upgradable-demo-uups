@@ -26,6 +26,10 @@ npx hardhat verify --network sepolia NEW_LOGIC_CONTRACT
 ```
 3. Check your proxy contract whether it is update
 
+## run scripts
+```
+npx hardhat run PATH --network sepolia
+```
 ## Note
 - In order for our contract to receive ERC1155 tokens, we can inherit from the convenience contract ERC1155Holder which handles the registering for us:
 ```
